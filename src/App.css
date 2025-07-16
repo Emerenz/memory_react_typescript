@@ -1,0 +1,203 @@
+#root {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card_container {
+  width: 1080px;
+  height: 680px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* top align the grid */
+  padding-top: 2px;          
+  
+}
+
+
+.cards {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 160px);
+  gap: 2px;
+  padding: 2px;
+  max-width: 100%;
+  width: fit-content;
+  justify-content: center;
+}
+
+.logo {
+  height: 100px;
+  width: 200px;
+  padding: 5px;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.cogwheel-img {
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  will-change: filter;
+  transition: filter 300ms;
+  align-self: right;
+}
+
+.cogwheel-img:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.cogwheel-img.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  width: 120px;
+  height: 158px;
+  position: relative;
+   -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    
+    transition: filter 0.3s ease;
+  
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 158px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  opacity: 0.2;
+}
+
+.card:hover .layer {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  border-radius: 8px;
+  border:8px;
+  width: 105px;
+  height: 155px;
+  background-color: rgba(55, 119, 68, 0.8);
+  opacity: .2;
+}
+
+.card-flipped .layer {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  border-radius: 8px;
+  border:8px;
+  width: 105px;
+  height: 155px;
+  background-color: rgba(55, 119, 68, 0.8);
+  opacity: .2;
+}
+
+.card :hover {
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-color:  #e9e9e9;
+  cursor:pointer
+}
+
+.card img {
+  object-fit: contain;
+  max-height:100%;
+   max-width:100%
+} 
+
+.card-flipped img {
+  object-fit: contain;
+  max-height:100%;
+   max-width:100%
+} 
+
+.image-flipped-class {
+ width: 50px;
+ height: 50px;
+}
+
+.card-flipped  {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 158px;
+  position: relative;
+   -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    
+    transition: filter 0.3s ease;
+}
+
+
+.read-the-docs {
+  color: #888;
+}
+
+.timer {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 30px;
+  color: #ff3b57;
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+.memory-data {
+
+    display: inline-block;
+   vertical-align:middle;
+
+
+}
+
+.memory-header {
+  text-align: center;
+  justify-content: space-between;
+  align-items:flex-start;
+  
+}
+
+.memory-header img {
+ 
+  display: inline-block;
+   vertical-align:middle;
+}
+
+.memory-header p {
+  
+  top: 0;
+  display: inline-block;
+  padding-left: 40px;
+}
