@@ -159,11 +159,10 @@ useEffect(() => {
     if (matchedCount === cardCount / 2) {
       setIsRunning(false);
       setGameWon(true);
-      setGameOver(true); // reuse existing modal
+      setGameOver(true); 
     }
   }, [matchedCount]);
 
-  // 🏁 Stop timer when all cards are matched
   useEffect(() => {
     const allMatched = displayedCards.every(card => card.isMatched);
     if (allMatched) {
@@ -194,16 +193,14 @@ useEffect(() => {
                 <div style={{ fontWeight: 600 }}>{mistakesCount} mistakes</div>
           </div>
           
-        
-              
-                  <button
-                    className="settings-button"
-                    onClick={() => setSettingsOpen(true)}
-                    title="Settings"
-                    style={{ background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}
-                  ><img src={cogwheel} className="cogwheel-img" alt="Vite logo" />
-                    <i className="fas fa-cog"></i>
-                  </button>
+          <button
+            className="settings-button"
+            onClick={() => setSettingsOpen(true)}
+            title="Settings"
+            style={{ background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}
+          ><img src={cogwheel} className="cogwheel-img" alt="Vite logo" />
+            <i className="fas fa-cog"></i>
+          </button>
           
       </div>
      
@@ -212,8 +209,6 @@ useEffect(() => {
         <Cards displayedCards={displayedCards} onFlip={handleFlip} />
       
       </div>
-
-
 
       {gameOver && (
             <TimeUpModal
@@ -229,8 +224,6 @@ useEffect(() => {
                 startTime={startTime}
                 startCardCount={cardCount}
               />
-
-
     </>
   )
 }
