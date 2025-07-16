@@ -47,10 +47,13 @@ const createCardDeck = (x: number): Card[] => {
 
 function App() {
 
-  const [cardCount, setCardCount] = useState(12);
+  const defaultStartTime = 30;
+  const defaultCardCount = 12;
+
+  const [cardCount, setCardCount] = useState(defaultCardCount);
   const [displayedCards, setDisplayedCards] = useState<Card[]>(() => createCardDeck(cardCount));
   const [flippedIndices, setFlippedIndices] = useState<number[]>([]);
-  const [seconds, setSeconds] = useState(30);
+  const [seconds, setSeconds] = useState(defaultStartTime);
   const [isRunning, setIsRunning] = useState(true);
   const [gameOver, setGameOver] = useState(false);
   let matchedCount = (displayedCards.filter(card => card.isMatched).length)/2;
@@ -59,7 +62,7 @@ function App() {
 
 
    const [settingsOpen, setSettingsOpen] = useState(false);
-  const [startTime, setStartTime] = useState(30);
+  const [startTime, setStartTime] = useState(defaultStartTime);
   const [timerKey, setTimerKey] = useState(0);
 
    const handleFlip = (id: number) => {
